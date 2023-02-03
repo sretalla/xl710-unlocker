@@ -10,7 +10,7 @@ This tool was tested on `X710-DA2` card.
 
 ### Update firmware
 
-Use intel [NVM utility][1] to upgrade firmware. I was using `nvmupdatepackage_v8_40` and upgraded x710-2DA to `8.64` firmware.
+Use intel [NVM utility][1] to upgrade firmware. I was using `nvmupdatepackage_v9_10` and upgraded x710-2DA to `9.10` firmware.
 
 [1]:https://www.intel.com/content/www/us/en/download/18190/24769/non-volatile-memory-nvm-update-utility-for-intel-ethernet-network-adapter-700-series.html
 ### Reading eeprom and finding registers
@@ -21,7 +21,7 @@ First tool to use is `mytool.c`. Replace `FILL_ME_IN` with correct values, build
 
 Open `eeprom.txt` and find 4 values `000b`: it should be in around range of `0x6800`-`0x7000` and offset between `000b` values should be around `0xb`-`0xf`.
 
-In my case `000b` was at `0x6947` and offset between values `0xe`.
+In my case `000b` was at `0x6948` and offset between values `0xf`.
 
 ### Poking values
 
